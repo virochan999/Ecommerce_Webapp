@@ -1,0 +1,39 @@
+{
+  "navlinks": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About",
+      "path": "about"
+    },
+    {
+      "name": "Contact",
+      "path": "contact"
+    }
+  ],
+  "headerText": "Header",
+  "categoryLinks": [
+    {
+      "name": "electronics",
+      "to": "electronics"
+    },
+    {
+      "name": "shoes",
+      "to": "shoes"
+    },
+    {
+      "name": "clothing",
+      "to": "clothing"
+    },
+    {
+      "name": "furniture",
+      "to": "furniture"
+    },
+    {
+      "name": "other",
+      "to": "miscellaneous"
+    }
+  ]
+}

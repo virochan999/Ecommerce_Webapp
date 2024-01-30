@@ -1,0 +1,39 @@
+{
+  "card": {
+    "price": "Price :",
+    "category": "Category :",
+    "addLabel": "+ Add to cart"
+  },
+  "cart": {
+    "emptyMessage": "Nothing in cart",
+    "label": {
+      "price": "Price",
+      "totalPrice": "Total Price",
+      "orderLabel": "Proceed to Order",
+      "removeText": "Remove from cart"
+    }
+  },
+  "label": {
+    "previous": "Prev",
+    "next": "Next"
+  },
+  "pages": {
+    "NotFoundPageMessage": "The requested page does not exist, Go to the home page",
+    "carouselDiscountMsg": "Avail the product at upto 50% discount",
+    "ProductNotFound": "Products not found",
+    "seeAllText": "See All"
+  },
+  "contactForm": {
+    "heading": "Contact us :",
+    "label": {
+      "name": "Name :",
+      "email": "Email :",
+      "description": "Description :"
+    },
+    "placeholder": {
+      "name": "Enter your name",
+      "email": "Enter your email",
+      "description": "Tell us about your query"
+    }
+  }
+}

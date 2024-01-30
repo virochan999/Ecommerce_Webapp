@@ -1,0 +1,25 @@
+{
+  "images": [
+    {
+      "id": "65a13718796a8b511d95d305",
+      "path": "https://i.imgur.com/R2PN9Wq.jpeg",
+      "title": "Handcrafted Frozen Ball",
+      "category": "clothing",
+      "discountPercentage": 12.96
+    },
+    {
+      "id": "65a13718796a8b511d95d30a",
+      "path": "https://i.imgur.com/axsyGpD.jpeg",
+      "title": "Classic White Crew Neck T-Shirt",
+      "category": "clothing",
+      "discountPercentage": 12.96
+    },
+    {
+      "id": "65a13718796a8b511d95d333",
+      "path": "https://i.imgur.com/cSytoSD.jpegg",
+      "title": "Intelligent Wooden Pizza",
+      "category": "clothing",
+      "discountPercentage": 50
+    }
+  ]
+}
