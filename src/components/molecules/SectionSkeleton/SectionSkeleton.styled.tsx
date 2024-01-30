@@ -1,10 +1,8 @@
 import styled from "styled-components"
 
-const primaryBackgroundColor = (props) => props.theme.primaryBackground
-
 export const SectionSkeletonWrapper = styled.div`
   padding: 1rem;
-  background-color: ${primaryBackgroundColor};
+  background-color: ${(props) => props.theme.primaryBackground};
   border-radius: 0.5rem;
 
   & .section-header {
