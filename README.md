@@ -47,7 +47,7 @@ Welcome to the E-Commerce App! This project is a full-stack e-commerce applicati
 
 ```
  git clone https://github.com/virochan999/Ecommerce_Webapp.git
- cd your-project
+ cd Ecommerce_Webapp
  npm install
 ```
 
