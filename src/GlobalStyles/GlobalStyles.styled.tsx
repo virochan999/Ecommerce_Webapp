@@ -72,6 +72,7 @@ export const GLobalStyles = createGlobalStyle`
     -moz-appearance: none;
     -webkit-appearance: none;
     -o-appearance: none;
+    appearance: none;
     width: 1rem;
     height: 1rem;
     background-color: ${colors.CHECKBOX_BG};

@@ -13,6 +13,7 @@ export const ProductCardWrapper = styled.div`
   align-items: center;
   height: fit-content;
   cursor: pointer;
+  height: 100%;
 
   & .product-title {
     font-size: small;

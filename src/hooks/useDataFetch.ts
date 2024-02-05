@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { apiUrl } from "../api/apiUrl"
 
 type DispatchPropTypes = {
@@ -11,6 +11,7 @@ type DispatchPropTypes = {
 const useDataFetch = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [abortController, setAbortController] = useState(new AbortController())
 
   const fetchData = async ({
     apiEndpoint,
@@ -19,8 +20,11 @@ const useDataFetch = () => {
   }: DispatchPropTypes) => {
     try {
       setLoading(true)
+      const controller = new AbortController()
+      setAbortController(controller)
       const response = await fetch(`${apiUrl.base_url}/${apiEndpoint}`, {
         method: method,
+        signal: controller.signal,
       })
       const data = await response.json()
       if (onSuccess) {
@@ -28,15 +32,25 @@ const useDataFetch = () => {
       }
       setLoading(false)
     } catch (error) {
-      let errorMessage = ""
-      if (error instanceof Error) {
-        errorMessage = error.message
+      if (!abortController.signal.aborted) {
+        let errorMessage = ""
+        if (error instanceof Error) {
+          errorMessage = error.message
+        }
+        setError(errorMessage)
       }
-      setError(errorMessage)
     }
   }
 
-  return { loading, error, fetchData }
+  const abortPreviousRequest = () => {
+    abortController.abort()
+  }
+
+  useEffect(() => {
+    return () => abortController.abort()
+  }, [abortController])
+
+  return { loading, error, fetchData, abortPreviousRequest }
 }
 
 export default useDataFetch

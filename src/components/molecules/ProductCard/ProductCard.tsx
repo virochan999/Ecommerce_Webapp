@@ -50,7 +50,12 @@ const ProductCard = ({ product }: ProductCardTypes) => {
         />
       </CardImage>
 
-      <h3 className="product-title">{product.title}</h3>
+      <h3
+        title={product.title}
+        className="product-title"
+      >
+        {product.title}
+      </h3>
       <DetailsWrapper>
         <TextWrapper>
           <Heading
