@@ -32,17 +32,32 @@ const FormInput = ({
 }: InputProps) => {
   return (
     <>
-      {labelText && <label htmlFor={id}>{labelText}</label>}
-      <StyledFormInput
-        {...register(name, { required: "This field is required" })}
-        type={inputType}
-        name={name}
-        id={id}
-        value={value}
-        placeholder={placeholder}
-        autoComplete="on"
-        required={required}
-      />
+      {labelText && (
+        <label htmlFor={id}>
+          {labelText} <span className="required">*</span>
+        </label>
+      )}
+      {inputType === "textarea" ? (
+        <textarea
+          {...register("message")}
+          name={name}
+          placeholder={placeholder}
+          id={id}
+          rows={5}
+          required={required}
+        ></textarea>
+      ) : (
+        <StyledFormInput
+          {...register(name, { required: "This field is required" })}
+          type={inputType}
+          name={name}
+          id={id}
+          value={value}
+          placeholder={placeholder}
+          autoComplete="on"
+          required={required}
+        />
+      )}
       {errors[name] && (
         <ErrorMessage className="error">{errors[name]!.message}</ErrorMessage>
       )}

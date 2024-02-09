@@ -7,6 +7,7 @@ export const colors = {
   MERCURY_COLOR: "#E5E5E5",
   MEDIUM_BLUE: "#0000cd",
   MEDIUM_RED: "#dc3545",
+  LIGHT_RED: "#ff7f7f",
   CHECKBOX_BG: "#f77f00",
   CHECKBOX_BORDER: "#ffa500",
   SKELETON_BG: "#adb5bd",

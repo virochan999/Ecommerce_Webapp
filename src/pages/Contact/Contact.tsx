@@ -68,15 +68,16 @@ const Contact = () => {
           />
         </div>
         <div className="contact-form__input">
-          <label htmlFor="message">{contactForm.label.description}</label>
-          <textarea
-            {...register("message")}
-            name="message"
+          <FormInput
+            register={register}
             placeholder={contactForm.placeholder.description}
+            labelText={contactForm.label.description}
             id="message"
-            rows={5}
-            required
-          ></textarea>
+            required={true}
+            name="message"
+            inputType="textarea"
+            errors={errors}
+          />
         </div>
 
         <div className="btn-wrapper">

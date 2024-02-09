@@ -104,4 +104,8 @@ export const GLobalStyles = createGlobalStyle`
     opacity: 1;
     transform: rotate(45deg) scale(1.2);
   }
+
+  .required {
+    color: ${colors.LIGHT_RED};
+  }
 `
