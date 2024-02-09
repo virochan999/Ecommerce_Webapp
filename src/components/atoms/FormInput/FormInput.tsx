@@ -1,5 +1,6 @@
 import { FieldErrors, Path, UseFormRegister } from "react-hook-form"
 import { StyledFormInput, ErrorMessage } from "./FormInput.styled"
+import { pages } from "../../../assets/local.json"
 
 interface IFormInputs {
   name: string
@@ -39,7 +40,7 @@ const FormInput = ({
       )}
       {inputType === "textarea" ? (
         <textarea
-          {...register("message")}
+          {...register(name, { required: pages.requiredMessage })}
           name={name}
           placeholder={placeholder}
           id={id}
@@ -48,7 +49,7 @@ const FormInput = ({
         ></textarea>
       ) : (
         <StyledFormInput
-          {...register(name, { required: "This field is required" })}
+          {...register(name, { required: pages.requiredMessage })}
           type={inputType}
           name={name}
           id={id}

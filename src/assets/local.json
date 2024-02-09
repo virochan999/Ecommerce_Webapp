@@ -21,7 +21,8 @@
     "NotFoundPageMessage": "The requested page does not exist, Go to the home page",
     "carouselDiscountMsg": "Avail the product at upto 50% discount",
     "ProductNotFound": "Products not found",
-    "seeAllText": "See All"
+    "seeAllText": "See All",
+    "requiredMessage": "This field is required"
   },
   "contactForm": {
     "heading": "Contact us :",
